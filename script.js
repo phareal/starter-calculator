@@ -108,7 +108,7 @@ function computeResult() {
 
   switch (state.operator) {
     case "add":
-      result = ''// do the calcul here
+      result = prev + current // do the calcul here
       break;
     case "subtract":
       result = ''// do the calcul here
