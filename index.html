@@ -10,38 +10,52 @@
     <main class="app">
       <section class="calculator">
         <header class="calculator__display">
-          <div class="calculator__display-value">0</div>
+          <div class="calculator__display-history" data-display-history></div>
+          <div class="calculator__display-value" data-display>0</div>
         </header>
 
-        <div class="calculator__keypad">
-          <button class="key key--function">C</button>
-          <button class="key key--function">%</button>
-          <button class="key key--function key--icon" aria-label="Backspace">
+        <div class="calculator__keypad" data-keypad>
+          <button class="key key--function" data-action="clear">C</button>
+          <button class="key key--function" data-action="percent">%</button>
+          <button
+            class="key key--function key--icon"
+            data-action="backspace"
+            aria-label="Backspace"
+          >
             ⌫
           </button>
-          <button class="key key--operator">÷</button>
+          <button class="key key--operator" data-action="operator" data-operator="divide">
+            ÷
+          </button>
 
-          <button class="key">7</button>
-          <button class="key">8</button>
-          <button class="key">9</button>
-          <button class="key key--operator">×</button>
+          <button class="key" data-digit="7">7</button>
+          <button class="key" data-digit="8">8</button>
+          <button class="key" data-digit="9">9</button>
+          <button class="key key--operator" data-action="operator" data-operator="multiply">
+            ×
+          </button>
 
-          <button class="key">4</button>
-          <button class="key">5</button>
-          <button class="key">6</button>
-          <button class="key key--operator">−</button>
+          <button class="key" data-digit="4">4</button>
+          <button class="key" data-digit="5">5</button>
+          <button class="key" data-digit="6">6</button>
+          <button class="key key--operator" data-action="operator" data-operator="subtract">
+            −
+          </button>
 
-          <button class="key">1</button>
-          <button class="key">2</button>
-          <button class="key">3</button>
-          <button class="key key--operator">+</button>
+          <button class="key" data-digit="1">1</button>
+          <button class="key" data-digit="2">2</button>
+          <button class="key" data-digit="3">3</button>
+          <button class="key key--operator" data-action="operator" data-operator="add">
+            +
+          </button>
 
-          <button class="key key--wide">0</button>
-          <button class="key">.</button>
-          <button class="key key--operator key--equals">=</button>
+          <button class="key key--wide" data-digit="0">0</button>
+          <button class="key" data-action="decimal">.</button>
+          <button class="key key--operator key--equals" data-action="equals">=</button>
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
 
